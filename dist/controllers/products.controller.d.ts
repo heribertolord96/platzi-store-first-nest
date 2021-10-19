@@ -1,11 +1,19 @@
 import { ProductsService } from './../services/products.service';
+import { CreateProductDto, UpdateProductDto } from '../dtos/products.dtos';
 export declare class ProductsController {
     private productsService;
     constructor(productsService: ProductsService);
     getProducts(limit: number, offset: number, brand: string): import("../entities/product.entity").Product[];
     getProductFilter(): string;
-    getOne(productId: string): import("../entities/product.entity").Product;
-    create(payload: any): any;
-    update(id: number, payload: any): import("../entities/product.entity").Product;
+    getOne(productId: number): import("../entities/product.entity").Product;
+    create(payload: CreateProductDto): {
+        name: string;
+        description: string;
+        price: number;
+        stock: number;
+        image: string;
+        id: number;
+    };
+    update(id: number, payload: UpdateProductDto): import("../entities/product.entity").Product;
     delete(id: number): number;
 }

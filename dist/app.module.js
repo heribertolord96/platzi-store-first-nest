@@ -17,13 +17,25 @@ const users_controller_1 = require("./controllers/users.controller");
 const customers_controller_1 = require("./controllers/customers.controller");
 const brands_controller_1 = require("./controllers/brands.controller");
 const products_service_1 = require("./services/products.service");
+const categories_services_ts_service_1 = require("./services/categories.services.ts.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [],
-        controllers: [app_controller_1.AppController, products_controller_1.ProductsController, categories_controller_1.CategoriesController, orders_controller_1.OrdersController, users_controller_1.UsersController, customers_controller_1.CustomersController, brands_controller_1.BrandsController],
-        providers: [app_service_1.AppService, products_service_1.ProductsService],
+        controllers: [
+            app_controller_1.AppController,
+            products_controller_1.ProductsController,
+            categories_controller_1.CategoriesController,
+            orders_controller_1.OrdersController,
+            users_controller_1.UsersController,
+            customers_controller_1.CustomersController,
+            brands_controller_1.BrandsController
+        ],
+        providers: [
+            app_service_1.AppService,
+            products_service_1.ProductsService, categories_services_ts_service_1.CategoriesServices
+        ],
     })
 ], AppModule);
 exports.AppModule = AppModule;

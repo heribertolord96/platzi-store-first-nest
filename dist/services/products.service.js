@@ -35,6 +35,7 @@ let ProductsService = class ProductsService {
         }
     }
     create(payload) {
+        console.log(payload);
         this.counterId = this.counterId + 1;
         const newProduct = Object.assign({ id: this.counterId }, payload);
         this.products.push(newProduct);
